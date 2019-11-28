@@ -9,6 +9,15 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1.1.0
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ env.cache-name }}-
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
       - run: yarn install
       - run: yarn run build
       - name: custom action step
