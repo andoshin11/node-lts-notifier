@@ -3,5 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "andoshin11 <shinglish11@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.4",
+    "typescript": "^3.7.2"
+  }
 }

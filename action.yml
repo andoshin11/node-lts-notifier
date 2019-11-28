@@ -1,0 +1,8 @@
+name: 'Check Latest LTS'
+description: 'Check latest avaialable Node.js version'
+outputs:
+  version:
+    description: 'Latest LTS version'
+runs:
+  using: 'node12'
+  main: 'lib/index.js'
